@@ -1,6 +1,6 @@
-
 package Nomina;
 
+// Clase padre abstracta
 public abstract class Empleado {
     public String primerNombre;
     public String apellidoPaterno;
@@ -12,14 +12,14 @@ public abstract class Empleado {
         this.numeroSeguroSocial = numeroSeguroSocial;
     }
 
-    public abstract double calcularPagoSemanal();
-    public abstract String obtenerDetallePago();
+    // Métodos getter
+    public String getPrimerNombre() { return primerNombre; }
+    public String getApellidoPaterno() { return apellidoPaterno; }
+    public String getNumeroSeguroSocial() { return numeroSeguroSocial; }
 
-	protected abstract String getPrimerNombre();
+    // Métodos abstractos que serán implementados por las clases hijas
+    public abstract double calcularPagoSemanal(); // POLIMORFISMO
+    public abstract String detalleCalculo();      // POLIMORFISMO
 
-	protected abstract String getApellidoPaterno();
-
-	protected abstract String getNumeroSeguroSocial();
-
-	protected abstract String detalleCalculo();
+	public abstract String obtenerDetallePago();
 }

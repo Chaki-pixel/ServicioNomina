@@ -2,6 +2,7 @@ package model;
 
 import Nomina.Empleado;
 
+// Clase hija de Empleado
 public class Asalariado extends Empleado {
     private double salarioSemanal;
 
@@ -16,30 +17,12 @@ public class Asalariado extends Empleado {
     }
 
     @Override
-    public String obtenerDetallePago() {
-        return "Salario semanal fijo: $" + salarioSemanal;
+    public String detalleCalculo() {
+        return "Salario fijo semanal = $" + salarioSemanal;
     }
 
 	@Override
-	protected String getPrimerNombre() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	protected String getApellidoPaterno() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	protected String getNumeroSeguroSocial() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	protected String detalleCalculo() {
+	public String obtenerDetallePago() {
 		// TODO Auto-generated method stub
 		return null;
 	}
